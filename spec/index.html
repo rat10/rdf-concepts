@@ -318,17 +318,18 @@
   <section id="section-triple-terms-reification">
     <h3>Triple Terms and Reification</h3>
 
-    <p>A <a>triple term</a> is an [=RDF triple=] used as an [=RDF term=]
-      in another triple. This use is a reference to a <a>proposition</a>. For
-      the triple term to also be asserted, it must [=appear=] in the same graph as both an <a>asserted
-      triple</a> and an unasserted <a>triple term</a>. This allows for statements to be made about statements
-      independent of their assertion within an <a>RDF graph</a>.
+    <p>A <a>triple term</a> encodes an [=RDF triple=] as an [=RDF term=] for use in another triple.
+	  A triple term used in another triple references a proposition, i.e. a triple in the abstract.
+	  For the proposition referenced by the <a>triple term</a> to be asserted, it must [=appear=] as 
+	  an <a>asserted triple</a> in the same graph. 
+	  This allows for statements to be made about triples that are not asserted within an <a>RDF graph</a> 
+	  (however, only as long as they are not aasserted and therefore not providing full independence).
     </p>
 
     <p>[=RDF terms=] that [=appear=] in a [=triple term=] have the same
       <a data-lt="denotes">denotation</a> as when they appear in an
       [=asserted triple=] in the <a data-lt="RDF graph">graph</a>.
-      For this reason, we say that triple terms are
+      For this reason, we say that triple terms are (referentially)
       <dfn class="lint-ignore">transparent</dfn>.</p>
 
     <p>
@@ -339,6 +340,8 @@
       When the triple term of a <a>reifying triple</a> also [=appears=] in the
       same graph as an <a>asserted triple</a>, the subset of triples that share
       the same <a>reifier</a> as subject is called a <dfn>triple annotation</dfn>.
+	  Otherwise the subset of triples that share the same <a>reifier</a> as subject 
+	  is called an <dfn>abstract annotation</dfn> [TODO create definition]. 
     </p>
 
     <p>
